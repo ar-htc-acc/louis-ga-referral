@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "export NODE_ENV=production; forever start -m 3 -a -l forever.log -o stdout.log -e stderr.log ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
